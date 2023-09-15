@@ -1,0 +1,152 @@
+.slider-wrapper {
+	overflow: hidden;
+	padding: 20px 0;
+
+	.primary-slick-slider-wrapper {
+		.primary-slick-slider {
+			.slide-item-wrapper {
+				.slide-item {
+					img {
+						width: 100%;
+						height: auto;
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.blinking-text-wrapper {
+		text-align: center;
+		padding: 10px 0;
+
+		.blinking-text {
+			font-weight: 900;
+			font-size: 30px;
+			display: inline-block;
+			text-transform: uppercase;
+			background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+			background-size: 2000% 2000%;
+			color: transparent;
+			animation-fill-mode: forwards;
+			-webkit-background-clip: text;
+			-webkit-animation: rgb 5s ease infinite;
+			-z-animation: rgb 5s ease infinite;
+			-o-animation: rgb 5s ease infinite;
+			animation: rgb 5s ease infinite;
+			position: relative;
+			@include responsive(767) {
+				font-size: 25px;
+			}
+			@include responsive(575) {
+				font-size: 20px;
+			}
+			@include responsive(424) {
+				font-size: 15px;
+			}
+			@include responsive(380) {
+				font-size: 14px;
+			}
+
+			&:before {
+				content: '\f0a4';
+				font-weight: 900;
+				font-family: "Font Awesome 6 Free";
+				display: inline-block;
+				margin-right: 10px;
+				-webkit-background-clip: text;
+				-webkit-animation: rgb-icon 1s ease infinite;
+				-z-animation: rgb-icon 1s ease infinite;
+				-o-animation: rgb-icon 1s ease infinite;
+				animation: rgb-icon 1s ease infinite;
+				color: #046F3A;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes rgb-icon {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+
+@-moz-keyframes rgb-icon {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+
+@-o-keyframes rgb-icon {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+
+@keyframes rgb-icon {
+	0%, 100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+
+/* Text color animation */
+@-webkit-keyframes rgb {
+	0% {
+		background-position: 0 82%
+	}
+	50% {
+		background-position: 100% 19%
+	}
+	100% {
+		background-position: 0 82%
+	}
+}
+
+@-moz-keyframes rgb {
+	0% {
+		background-position: 0 82%
+	}
+	50% {
+		background-position: 100% 19%
+	}
+	100% {
+		background-position: 0 82%
+	}
+}
+
+@-o-keyframes rgb {
+	0% {
+		background-position: 0 82%
+	}
+	50% {
+		background-position: 100% 19%
+	}
+	100% {
+		background-position: 0 82%
+	}
+}
+
+@keyframes rgb {
+	0% {
+		background-position: 0 82%;
+	}
+	50% {
+		background-position: 100% 19%;
+	}
+	100% {
+		background-position: 0 82%;
+	}
+}

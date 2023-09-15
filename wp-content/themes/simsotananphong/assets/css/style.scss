@@ -1,0 +1,194 @@
+// Utilities
+// Sass tools and helpers used across the project.
+@import '../scss/utils/variables';
+@import '../scss/utils/mixins';
+
+// Vendors
+// External libraries and frameworks.
+@import '../scss/vendors/normalize';
+@import '../scss/vendors/fonts';
+@import '../scss/vendors/defaults';
+
+// Components
+@import '../scss/components/container';
+@import '../scss/components/card';
+@import '../scss/components/form';
+@import '../scss/components/button';
+@import '../scss/components/mmenu';
+
+// Layouts
+@import '../scss/header';
+@import '../scss/slider';
+@import '../scss/banner';
+@import '../scss/sidebar';
+@import '../scss/sim';
+@import '../scss/blog';
+@import '../scss/checkout';
+@import '../scss/package';
+@import '../scss/page';
+@import '../scss/footer';
+@import '../scss/single';
+@import '../scss/archive-sim';
+@import '../scss/recruitment';
+@import '../scss/fab';
+@import '../scss/bottom-bar';
+@import '../scss/content-product-2';
+@import '../scss/popup';
+
+.row {
+	@include responsive(424) {
+		margin-right: -4px;
+		margin-left: -4px;
+	}
+
+	.row > * {
+		@include responsive(424) {
+			padding-right: 4px;
+			padding-left: 4px;
+		}
+	}
+}
+
+.pagination-wrapper {
+	.n-page-nav-wrapper {
+		@include flexbox();
+		@include justify-content(flex-end);
+		@include flex-wrap(wrap);
+
+		.page-nav-prev, .page-nav-next {
+			min-width: 30px;
+			line-height: 28px;
+			border: 1px solid #046F3A;
+			border-radius: 5px;
+			@include flexbox();
+			@include justify-content(center);
+			@include align-items(center);
+			font-size: 15px;
+			color: #046F3A;
+			@include transition(.3s all);
+			margin: 0 5px;
+
+			&:hover {
+				background-color: rgb(0, 0, 0, .2);
+			}
+		}
+
+		ul {
+			@include flexbox();
+			@include justify-content(flex-end);
+			@include flex-wrap(wrap);
+
+			li {
+				margin: 0 5px;
+
+				&.page-nav-item-current {
+					a {
+						background-color: #046F3A;
+						color: #fff;
+					}
+				}
+
+				a {
+					min-width: 30px;
+					line-height: 28px;
+					border: 1px solid #046F3A;
+					border-radius: 5px;
+					@include flexbox();
+					@include justify-content(center);
+					@include align-items(center);
+					font-size: 15px;
+					color: #046F3A;
+					@include transition(.3s all);
+
+					&:hover {
+						background-color: rgb(0, 0, 0, .2);
+					}
+				}
+			}
+		}
+	}
+}
+
+.theme-loader-wrapper {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1100;
+	background: rgba(0, 0, 0, .5);
+	@include transition(all 0.3s);
+
+	.theme-loader {
+		border-radius: 20px;
+		width: 20px;
+		height: 20px;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation: loading 1.8s infinite ease-in-out;
+		animation: loading 1.8s infinite ease-in-out;
+		position: absolute;
+		color: #fff;
+		margin: -25px auto 0 auto;
+		-webkit-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+		top: 10%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+
+		&:after, &:before {
+			content: '';
+			border-radius: 20px;
+			width: 20px;
+			height: 20px;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation: loading 1.8s infinite ease-in-out;
+			animation: loading 1.8s infinite ease-in-out;
+			position: absolute;
+			top: 0;
+		}
+
+		&:before {
+			left: -35px;
+			-webkit-animation-delay: -0.32s;
+			animation-delay: -0.32s;
+		}
+
+		&:after {
+			left: 35px;
+		}
+	}
+}
+
+@-webkit-keyframes loading {
+	0%, 80%, 100% {
+		box-shadow: 0 25px 0 -1.3px;
+	}
+	40% {
+		box-shadow: 0 25px 0 0;
+	}
+}
+
+@keyframes loading {
+	0%, 80%, 100% {
+		box-shadow: 0 25px 0 -13px;
+	}
+	40% {
+		box-shadow: 0 25px 0 0;
+	}
+}
+
+.fb-comments-wrapper {
+	background: #FFFFFF;
+	border: 1px solid #E3E3E3;
+	box-shadow: 0 4px 9px #DADADA;
+	border-radius: 8px;
+	margin-top: 30px;
+
+	.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+}

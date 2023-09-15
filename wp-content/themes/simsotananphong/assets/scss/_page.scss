@@ -1,0 +1,157 @@
+.page-wrapper {
+	padding: 68px 0;
+
+	.page-title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 36px;
+		text-transform: uppercase;
+		color: $mobi-color;
+		margin-bottom: 24px;
+		@include responsive(767) {
+			font-size: 25px;
+		}
+	}
+
+	.desc {
+		max-width: 532px;
+		margin: 0 auto;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: #7A7A7A;
+	}
+}
+
+.register-wrapper {
+	.link-wrapper {
+		text-align: center;
+	}
+
+	.tutorial-link {
+		display: inline-block;
+		position: relative;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: #046F3A;
+		padding-right: 26px;
+
+		&:hover {
+			&:after {
+				@include transform(translateX(7px));
+			}
+		}
+
+		&:after {
+			content: '';
+			background-image: url("../images/double-right.png");
+			display: inline-block;
+			width: 15px;
+			height: 18px;
+			background-size: cover;
+			position: absolute;
+			top: 1px;
+			right: 0;
+			@include transition(.3s all);
+		}
+	}
+
+	.kyc-form-wrapper {
+		margin-top: 57px;
+
+		.kyc-form {
+			max-width: 766px;
+			margin: 0 auto;
+
+			.buttons-wrapper {
+				text-align: center;
+
+				button {
+					display: inline-block;
+					width: auto;
+				}
+			}
+
+			.file-upload {
+				label {
+					display: block;
+					height: 242px;
+					background: #F2F4FF;
+					border: 2px dashed #A9B6FF;
+					border-radius: 8px;
+					position: relative;
+					padding: 65px 25px 25px;
+					text-align: center;
+					cursor: pointer;
+					margin-bottom: 24px;
+					overflow: hidden;
+
+					.image-remove {
+						position: absolute;
+						top: 8px;
+						right: 8px;
+						background: rgba(0 0 0/.3);
+						width: 22px;
+						height: 22px;
+						min-width: 22px;
+						cursor: pointer;
+						line-height: 22px;
+						color: #fff;
+						border-radius: 50%;
+						font-size: 12px;
+						display: none;
+						z-index: 100;
+					}
+
+					.preview {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						display: none;
+						background: #F2F4FF;
+
+						&.show {
+							display: block;
+						}
+					}
+
+					&:before {
+						content: '';
+						background-image: url("../images/plus.png");
+						width: 49px;
+						height: 46px;
+						display: block;
+						margin: 0 auto;
+					}
+
+					.upload-title {
+						margin-top: 18px;
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 22px;
+						text-align: center;
+						margin-bottom: 2px;
+					}
+
+					.upload-desc {
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 19px;
+						color: #A0A0A0;
+						margin-bottom: 0;
+					}
+
+					input {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

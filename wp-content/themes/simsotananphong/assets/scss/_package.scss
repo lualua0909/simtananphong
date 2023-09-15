@@ -1,0 +1,114 @@
+.packages-wrap {
+	max-height: 740px;
+	overflow-x: auto;
+}
+
+.package {
+	background: #FFFFFF;
+	border: 1px solid #C8C8C8;
+	box-shadow: 0 4px 9px #DADADA;
+	border-radius: 8px;
+	margin-bottom: 30px;
+
+	table {
+		margin: 0;
+		border-radius: 8px;
+
+		tbody {
+			border-bottom: 0;
+
+			tr {
+				td {
+					border-right: 1px solid rgba(116, 116, 116, 0.25);
+					width: 18%;
+					color: #000000;
+					font-size: 18px;
+					line-height: 22px;
+					padding: 10px 20px;
+					border-top: 1px solid rgba(116, 116, 116, 0.25);
+
+					&.package-name {
+						width: 27%;
+						border-top-left-radius: 8px;
+						border-top: 0;
+					}
+
+					&.package-code {
+						width: 55%;
+						font-weight: 700;
+						border-top: 0;
+					}
+
+					&.package-select {
+						text-align: center;
+						border-radius: 0 8px 8px 0;
+						border-right: 0;
+						border-top: 0;
+					}
+
+					&.endow {
+						border-bottom-left-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+
+	ul {
+		padding-left: 25px;
+		@include responsive(424) {
+			padding-left: 10px;
+		}
+
+		li {
+			list-style-type: disc;
+			margin-bottom: 6px;
+		}
+	}
+
+	.radio-button {
+		cursor: pointer;
+
+		input[type=radio] {
+			box-sizing: border-box;
+			padding: 0;
+		}
+
+		.radio-button-input {
+			opacity: 0;
+			position: absolute;
+
+			&:checked {
+				+ .radio-button-control {
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 6px;
+						left: 6px;
+						width: 18px;
+						height: 18px;
+						background-color: #046F3A;
+						border-radius: 12px;
+					}
+				}
+
+				+ .radio-button-control {
+					border-color: #046F3A;
+				}
+			}
+		}
+
+		.radio-button-control {
+			position: relative;
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			vertical-align: middle;
+			background-color: inherit;
+			color: #017b5f;
+			border: 3px solid #046F3A;
+			border-radius: 35px;
+		}
+	}
+}

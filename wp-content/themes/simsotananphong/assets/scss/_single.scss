@@ -1,0 +1,75 @@
+.single-wrapper {
+	padding: 60px 0;
+	@include responsive(991) {
+		padding: 24px 0;
+	}
+
+	.featured-img-wrapper {
+		margin-bottom: 30px;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+	}
+
+	.entry-title {
+		font-size: 38px;
+		font-weight: 700;
+		color: #000;
+		max-width: 874px;
+		text-align: center;
+		margin: 0 auto 25px auto;
+		@include responsive(991) {
+			font-size: 30px;
+		}
+		@include responsive(767) {
+			font-size: 25px;
+		}
+	}
+
+
+	.entry-date-wrapper {
+		text-align: center;
+
+		.entry-date {
+			text-align: center;
+			display: inline-block;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			color: #7A7A7A;
+			position: relative;
+			padding-left: 40px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -2px;
+				display: block;
+				background-image: url("../images/calender.png");
+				width: 24px;
+				height: 24px;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.entry-content {
+		ol, ul {
+			padding-left: 2rem;
+		}
+
+		ul {
+			list-style-type: disc;
+
+			li {
+				list-style-type: disc;
+			}
+		}
+	}
+}

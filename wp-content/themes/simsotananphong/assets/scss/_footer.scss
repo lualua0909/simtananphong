@@ -1,0 +1,148 @@
+.footer {
+	background-color: $mobi-color;
+	@include responsive(991) {
+		padding-bottom: 140px;
+	}
+
+	.footer-top {
+		padding: 30px 0;
+
+		.logo-wrapper {
+			@include flexbox();
+			@include flex-wrap(wrap);
+			margin-bottom: 35px;
+
+			.logo-img {
+				@include flex-basis(90px);
+				max-width: 90px;
+				text-align: center;
+				@include responsive(375) {
+					@include flex-basis(50px);
+					max-width: 50px;
+				}
+
+				img {
+					max-width: 100%;
+					width: auto;
+					max-height: 100%;
+					height: auto;
+				}
+			}
+
+			.logo-text {
+				@include flex-basis(calc(100% - 90px));
+				max-width: calc(100% - 90px);
+				@include responsive(375) {
+					@include flex-basis(calc(100% - 50px));
+					max-width: calc(100% - 50px);
+					padding-left: 10px;
+				}
+
+				.title {
+					color: #EFB71C;
+					font-size: 21px;
+					font-weight: 700;
+					margin-bottom: 16px;
+					@include responsive(375) {
+						font-size: 16px;
+						margin-bottom: 0;
+					}
+				}
+
+				.subtitle {
+					margin-bottom: 0;
+					color: #FFF;
+					font-size: 18px;
+					font-weight: 400;
+					@include responsive(575) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.branch-list {
+			li {
+				color: #FFF;
+				font-size: 14px;
+				font-weight: 400;
+				margin-bottom: 13px;
+
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+
+		.menu-title {
+			color: #EFB71C;
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			@include responsive(991) {
+				margin-top: 30px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	ul.footer-links {
+		li {
+			color: #FFF;
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: 5px;
+
+			a {
+				display: inline-block;
+				color: inherit;
+
+				&:hover {
+					color: #EFB71C;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		border-top: 1px solid #2D8B5D;
+
+		ul.secondary-links {
+			@include flexbox();
+			@include flex-wrap(wrap);
+			@include align-items(center);
+			@include justify-content(center);
+			padding: 10px 0;
+
+			li {
+				color: #FFF;
+				font-size: 21px;
+				font-weight: 400;
+				padding: 0 15px;
+				line-height: normal;
+				border-right: 1px solid #238756;
+				margin: 5px 0;
+				@include responsive(991) {
+					font-size: 18px;
+				}
+				@include responsive(767) {
+					font-size: 14px;
+					padding: 0 5px;
+				}
+
+				&:last-child {
+					border-right: 0;
+				}
+
+				a {
+					display: inline-block;
+					color: inherit;
+
+					&:hover {
+						color: #EFB71C;
+					}
+				}
+			}
+		}
+	}
+}

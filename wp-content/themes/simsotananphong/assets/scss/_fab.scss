@@ -1,0 +1,116 @@
+.fab-wrapper {
+	position: fixed;
+	z-index: 1000;
+	bottom: 80px;
+	right: 15px;
+	width: 60px;
+	@include responsive(991) {
+		width: 50px;
+	}
+
+	#back-to-top {
+		display: block;
+		width: 60px;
+		height: 60px;
+		background-size: 25px 10px;
+		background-color: #FFFFFF;
+		border: 1px solid #C4C4C4;
+		box-shadow: 0 4px 44px rgba(120, 120, 120, 0.25);
+		border-radius: 100px;
+		background-image: url("../images/arrow-3.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 0 auto;
+		@include responsive(991) {
+			width: 45px;
+			height: 45px;
+			background-size: 25px 10px;
+		}
+	}
+
+	.call {
+		width: 60px;
+		height: 60px;
+		background-size: 60px;
+		border-radius: 116px;
+		background-image: url("../images/call.png");
+		background-repeat: no-repeat;
+		display: block;
+		margin: 0 auto 13px auto;
+		@include responsive(991) {
+			display: none;
+			width: 45px;
+			height: 45px;
+			background-size: 45px;
+			margin: 0 auto 10px auto;
+		}
+	}
+
+	.zalo, .messenger, .tiktok {
+		margin: 0 auto 13px auto;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #fff;
+		border-radius: 60px;
+		box-shadow: 0 0 10px 2px rgba(83, 84, 105, 0.17);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 30px;
+		@include responsive(991) {
+			display: none;
+			width: 45px;
+			height: 45px;
+			background-size: 20px;
+			margin: 0 auto 10px auto;
+		}
+	}
+
+	.zalo {
+		background-image: url("../images/zalo-2.png");
+
+	}
+
+	.messenger {
+		background-image: url("../images/messenger.png");
+	}
+
+	.tiktok {
+		background-image: url("../images/tiktok.png");
+	}
+}
+
+.action-call {
+	position: fixed;
+	bottom: 80px;
+	left: 15px;
+	background: #01a0dd;
+	border-radius: 50px;
+	padding-left: 70px;
+	white-space: nowrap;
+	line-height: 50px;
+	font-weight: 700;
+	font-size: 20px;
+	color: #ffffff;
+	padding-right: 29px;
+	z-index: 1000;
+
+	@include responsive(767) {
+		font-size: 20px;
+	}
+
+	.icon {
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		width: 40px;
+		height: 40px;
+		background-color: #4CC9F9;
+		border-radius: 50px;
+		display: block;
+		background-image: url("../images/phone-2.png");
+		background-size: 20px 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

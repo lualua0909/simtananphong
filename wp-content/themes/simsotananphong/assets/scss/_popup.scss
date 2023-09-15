@@ -1,0 +1,32 @@
+#popupModal {
+	.modal-content {
+		position: relative;
+
+		.btn-close {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background-color: #000;
+			color: #fff;
+			border-radius: 50%;
+			line-height: 30px;
+			text-align: center;
+			right: -15px;
+			top: -15px;
+			margin: 0;
+			padding: 0;
+			opacity: 1;
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+		}
+
+		.img-wrapper {
+			img {
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

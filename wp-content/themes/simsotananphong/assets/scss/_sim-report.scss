@@ -1,0 +1,47 @@
+.sim-report {
+	margin-top: 30px;
+
+	.datepicker-wrapper {
+		@include flexbox();
+		@include align-items(center);
+
+		.datepicker-control {
+			margin-right: 3px;
+
+			label {
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+
+		.product-filter {
+			padding-top: 33px;
+			margin-right: 3px;
+		}
+
+		.datepicker-button-control {
+			padding-top: 33px;
+		}
+	}
+
+	.product-filter-wrapper {
+		margin-top: 30px;
+	}
+}
+
+#sim-report-table {
+	margin-top: 50px;
+}
+
+.export-wrapper {
+	margin-top: 30px;
+}
+
+.total-report {
+	p {
+		font-weight: 700;
+		color: #000;
+		font-size: 21px;
+		margin: 10px 0;
+	}
+}

@@ -1,0 +1,44 @@
+.bottom-bar-wrapper {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #fff;
+	border: 1px solid #D8D8D8;
+	box-shadow: 0 -11px 21px rgba(100, 100, 100, 0.25);
+	display: none;
+	@include responsive(991) {
+		display: block;
+	}
+
+	.button-bar-buttons {
+		@include flexbox();
+		@include flex-wrap(wrap);
+		@include justify-content(space-between);
+
+		a {
+			display: block;
+			@include flex-grow(1);
+			text-align: center;
+			padding: 8px;
+
+			img {
+				vertical-align: middle;
+				max-width: 32px;
+				max-height: 32px;
+				width: auto;
+				height: auto;
+				margin: 0 auto 4px auto;
+			}
+
+			.text {
+				display: block;
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 14px;
+				color: #313331;
+			}
+		}
+	}
+}

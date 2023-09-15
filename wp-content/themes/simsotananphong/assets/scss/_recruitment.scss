@@ -1,0 +1,68 @@
+.recruitment-wrapper {
+	.page-title-wrapper {
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1;
+		padding: 58px 0 73px 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			z-index: -1;
+			background: rgba(0, 0, 0, 0.68);
+		}
+
+		.entry-content {
+			font-weight: 700;
+			font-size: 38px;
+			line-height: 46px;
+			text-align: center;
+			color: #FFFFFF;
+			margin-bottom: 30px;
+			@include responsive(991) {
+				font-size: 30px;
+				line-height: 1.4;
+			}
+		}
+
+		.desc {
+			font-style: italic;
+			font-weight: 400;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+			color: #FFFFFF;
+			max-width: 741px;
+			margin: 0 auto;
+		}
+	}
+
+	.recruitment-content {
+		padding: 90px 0;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: #000000;
+
+		.recruitment-title {
+			background: rgba(0, 96, 176, 0.3);
+			border-radius: 8px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 24px;
+			color: #046F3A;
+			padding: 10px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			margin-bottom: 40px;
+		}
+	}
+}

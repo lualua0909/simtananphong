@@ -1,0 +1,146 @@
+.sim-item-2 {
+	background-color: #FFFFFF;
+	box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	background-image: url("../images/sim-item-bg.png");
+	background-position: center bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 12px;
+	margin-bottom: 24px;
+
+	.item-header {
+		@include flexbox();
+		@include flex-wrap(wrap);
+		@include align-items(center);
+
+		.logo {
+			@include flex-basis(70%);
+			max-width: 70%;
+
+			img {
+				vertical-align: middle;
+				max-width: 100%;
+				max-height: 22px;
+				width: auto;
+				height: auto;
+			}
+		}
+
+		.discount {
+			@include flex-basis(30%);
+			max-width: 30%;
+			text-align: right;
+
+			span {
+				display: inline-block;
+				background: #FF7A00;
+				box-shadow: 5px 5px 15px rgba(255, 122, 0, 0.15);
+				border-radius: 100px;
+				font-weight: 500;
+				font-size: 12px;
+				text-align: center;
+				line-height: 22px;
+				min-width: 53px;
+				padding: 0 10px;
+				color: #fff;
+			}
+		}
+	}
+
+	.entry-title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 24px;
+		color: #313331;
+		text-transform: uppercase;
+		margin-top: 12px;
+		margin-bottom: 16px;
+
+		a {
+			color: inherit;
+			display: inline-block;
+		}
+	}
+
+	.product-meta-wrapper {
+		background: #FFFFFF;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+		padding: 8px 12px;
+
+		.product-meta {
+			min-height: 250px;
+
+			li {
+				position: relative;
+				padding-left: 25px;
+				margin-bottom: 5px;
+
+				span {
+					font-weight: 700;
+				}
+
+				.icon {
+					position: absolute;
+					left: 0;
+					top: 5px;
+
+					img {
+						max-width: 16px;
+						max-height: 16px;
+						width: auto;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+
+	.item-bottom {
+		@include flexbox();
+		@include flex-wrap(wrap);
+		@include align-items(center);
+		margin-top: 17px;
+
+		.prices {
+			@include flex-basis(50%);
+			max-width: 50%;
+			line-height: 1;
+
+			.regular-price {
+				font-weight: 800;
+				font-size: 18px;
+				letter-spacing: 0.05em;
+				color: #ECFF12;
+			}
+
+			.sale-price {
+				font-weight: 500;
+				font-size: 12px;
+				text-decoration-line: line-through;
+				color: #FFFFFF;
+			}
+		}
+
+		.buy-button {
+			@include flex-basis(50%);
+			max-width: 50%;
+			text-align: right;
+
+			a {
+				display: inline-block;
+				background: #FFFFFF;
+				border-radius: 6px;
+				font-weight: 500;
+				font-size: 16px;
+				text-align: center;
+				color: #313331;
+				white-space: nowrap;
+				min-width: 94px;
+				line-height: 35px;
+				padding: 0 10px;
+			}
+		}
+	}
+}
