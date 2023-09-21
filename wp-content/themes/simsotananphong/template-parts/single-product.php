@@ -73,7 +73,7 @@ endif;
 							$api_packages = $msisdn_detail->data->items[0]->packages;
 						endif;
 					endif;
-							
+
 					$sim_price = (float) $product->get_price();
 					$subtotal  = $sim_price + (float) $van_chuyen;
 
