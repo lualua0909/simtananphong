@@ -371,7 +371,7 @@ function _n_check_dang_so($phone){
  */
 
 function _n_send_telegram_message($args){
-	$url = "https://phplaravel-695396-3032411.cloudwaysapps.com/api/sim-push-telegram";
+	$url = "https://phplaravel-1100866-3856926.cloudwaysapps.com/api/sim-push-telegram";
 
 	$data = [
 		'customerName'  => $args['customerName'],
