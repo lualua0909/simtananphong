@@ -14,7 +14,12 @@
 								<h1 class="section-title"><?php the_archive_title(); ?></h1>
 							<?php endif; ?>
 						</div>
-
+						<?php if (isset($_GET['last_num']) || $_GET['last_num'] == true || $_GET['last_num'] == "true"):
+						$last_num = substr($_GET['s'], - 4); ?>
+						<div class="alert alert-success" role="alert">
+							Số thuê bao <b><?= $_GET['snum'] ?></b> đã được sử dụng. Các số tương tự "<?= $last_num ?>"!
+						</div>
+					<?php endif; ?>
 						<div class="sims-wrapper">
 							<div class="row">
 								<?php while (have_posts()): the_post(); ?>
@@ -26,22 +31,36 @@
 						</div>
 
 					<?php else:
-					if (isset($_GET['nam'])):
+					if (isset($_GET['nam']) && $_GET['nam'] != ''):
 					$last = substr($_GET['nam'], - 2);
-					$url  = "?post_type=product&action=advanced_search&s=&nam=76";
+					$url  = "?post_type=product&action=advanced_search&s=&nam=" . $last;
 					$url  = home_url($url);
 					?>
 						<script>
 							location.href = '<?= $url ?>';
 						</script>
 
-					<?php endif; ?>
+					<?php endif;
+					if (!isset($_GET['last_num']) || $_GET['last_num'] == false):
+					$last_num = substr($_GET['s'], - 4);
+					$url      = "?post_type=product&action=advanced_search&snum=" . $_GET['s'] . "&last_num=true&s=*" . $last_num;
+					$url      = home_url($url);
+					?>
+						<script>
+							location.href = '<?= $url ?>';
+						</script>
+
+					<?php else: ?>
+
 						<div class="alert alert-danger" role="alert">
 							Số thuê bao đã được sử dụng. Mời bạn chọn số thuê bao khác!
 						</div>
-					<?php endif; ?>
+					<?php endif;
+					endif; ?>
+
 					<div class="pagination-wrapper">
-						<?php _n_pagination([
+						<?php
+						_n_pagination([
 							'prev' => '<',
 							'next' => '>',
 						]) ?>

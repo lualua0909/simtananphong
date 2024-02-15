@@ -135,6 +135,13 @@ add_action('_n_page_template_page_template_recruitment', function (){
 });
 
 /**
+ * Template internet
+ */
+add_action('_n_page_template_page_template_internet', function (){
+	get_template_part('template-parts/internet/slider');
+});
+
+/**
  * The template for displaying all single posts
  */
 add_action('_n_single_post', function (){

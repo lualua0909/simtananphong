@@ -392,4 +392,14 @@
 		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, thousandSeparator)
 		return parts.join(decimalSeparator)
 	}
+
+	// Slider
+	$('.internet-slider').slick({
+		infinite: true,
+		arrows: true,
+		dots: true,
+		adaptiveHeight: true,
+		// autoplay: true,
+		// autoplaySpeed: 5000,
+	});
 })(jQuery);
