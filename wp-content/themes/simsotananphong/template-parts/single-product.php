@@ -373,10 +373,12 @@ endif;
 												</label>
 											</td>
 										</tr>
-										<tr>
-											<td>Giá gói</td>
-											<td><?= number_format($product->get_price(), '0', '.', '.') ?>đ/30 ngày</td>
-										</tr>
+										<?php if ($product->get_price()): ?>
+											<tr>
+												<td>Giá gói</td>
+												<td><?= number_format($product->get_price(), '0', '.', '.') ?>đ/30 ngày</td>
+											</tr>
+										<?php endif; ?>
 										<tr>
 											<td class="endow">Ưu đãi</td>
 											<td>
